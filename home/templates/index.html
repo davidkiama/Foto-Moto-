@@ -24,7 +24,35 @@
             <div class="content gallery">
                 <ul>
                     <!-- Comes from js -->
+                    {% for image in images %}
+                    <li class="gal-list">
+                        <img src="{{image.image.url}} " alt="Gal Img" loading="lazy"
+                            class="gal-img" />
+                        <div class="gal-list-desc">
+                            <div>
+                                <p class="gal-list__category">
+                                    <svg class="icon">
+                                        <use xlink:href="static/img/sprite.svg#hashtag">
+                                        </use>
+                                    </svg>
+                                    {{image.category}}
+                                </p>
+                                <p class="gal-list__location">
+                                    <svg class="icon">
+                                        <use xlink:href="static/img/sprite.svg#location">
+                                        </use>
+                                    </svg>
+                                    {{image.location}}
+                                </p>
+                            </div>
 
+                            <svg class="icon">
+                                <use xlink:href="static/img/sprite.svg#copy"></use>
+                            </svg>
+                        </div>
+                    </li>
+
+                    {% endfor %}
 
                 </ul>
             </div>
