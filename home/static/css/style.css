@@ -26,7 +26,7 @@ body {
 
 .header {
   flex: 0 0 8rem;
-  background-color: rgba(230, 230, 230, 0.35);
+  background-color: rgba(230, 230, 230, 0.55);
   box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.25);
   position: sticky;
   top: 0;
@@ -72,7 +72,7 @@ body {
 
 /* Image Description  */
 .gal-list:hover .gal-list-desc {
-  transform: translateY(-5.5rem);
+  transform: translateY(-5.2rem);
   opacity: 1;
 }
 
@@ -93,6 +93,23 @@ body {
 
 .gal-list__copy {
   height: 3rem;
+}
+.gal-list__category,
+.gal-list__location {
+  display: flex;
+  align-items: center;
+}
+
+.hashtag {
+  color: #fff;
+  font-size: 2.2rem;
+  margin: 0 0.3rem;
+}
+.icon {
+  height: 2rem;
+  width: 2rem;
+
+  fill: #fff;
 }
 
 @media only screen and (max-width: 37.5em) {

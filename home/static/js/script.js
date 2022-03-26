@@ -11,11 +11,27 @@ for (let step = 0; step < 15; step++) {
       class="gal-img" />
     <div class="gal-list-desc">
       <div>
-          <p class="gal-list__category">Category</p>
-          <p class="gal-list__location">Location</p>
+
+          <p class="gal-list__category">
+          
+          <svg class="icon">
+            <use xlink:href="static/img/sprite.svg#hashtag"></use>
+          </svg>
+          
+            Category
+          </p>
+          <p class="gal-list__location">
+
+          <svg class="icon">
+            <use xlink:href="static/img/sprite.svg#location"></use>
+          </svg>
+            Location
+          </p>
       </div>
 
-        <img src="static/img/copy.svg" class="gal-list__copy" />
+      <svg class="icon">
+      <use xlink:href="static/img/sprite.svg#copy"></use>
+    </svg>
     </div>
     </li>
   
