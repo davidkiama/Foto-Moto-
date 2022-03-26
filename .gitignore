@@ -20,3 +20,4 @@ _book
 *.pyc
 home/migrations
 db.sqlite3
+media/uploads

@@ -2,6 +2,7 @@
 
 {% block content %}
 <div class="content gallery">
+
     <ul>
         <!-- Comes from js -->
         {% for image in images %}
@@ -11,8 +12,7 @@
             <div class="gal-list-desc">
                 <div>
 
-                    <a href=" {% url 'category' category=image.category.id %} "
-                        class="gal-list__category">
+                    <a href="" class="gal-list__category">
                         <svg class="icon">
                             <use xlink:href="static/img/sprite.svg#hashtag">
                             </use>

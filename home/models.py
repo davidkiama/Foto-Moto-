@@ -17,6 +17,11 @@ class Image(models.Model):
         images = cls.objects.all()
         return images
 
+    @classmethod
+    def get_images_by_category(cls, category):
+        images = cls.objects.filter(category=category)
+        return images
+
 
 class Location(models.Model):
     name = models.CharField(max_length=60)
