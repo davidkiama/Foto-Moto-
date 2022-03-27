@@ -32,10 +32,29 @@ body {
   top: 0;
   z-index: 5;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 3rem;
+  width: 100%;
+}
+
+.logo {
+  margin-right: -10rem;
+}
+
+.search {
+  margin: 0 auto;
+  flex: 0 0 30%;
+  border-radius: 100px;
+  background-color: #dcdcdc;
+  padding: 0.7rem 1.4rem;
+  font-size: 1.6rem;
+  border: none;
+  transition: all 0.2s;
+}
+.search:focus {
+  outline: none;
+  flex: 0 0 32%;
 }
 
 .main {
