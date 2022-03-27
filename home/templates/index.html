@@ -2,55 +2,7 @@
 {% load static%}
 {% block content %}
 <div class="content gallery">
-    <ul>
-        {% if images %}
-        <!-- Comes from js -->
-        {% for image in images %}
-        <li class="gal-list">
-            <a href=" {% url 'image' image_id=image.id %} ">
-                <img src="{{image.image.url}} " alt="Gal Img" loading="lazy"
-                    class="gal-img" />
-            </a>
 
-            <div class="gal-list-desc">
-                <div>
-
-                    <a href="{% url 'category' category=image.category.id %}"
-                        class="gal-list__category">
-                        <svg class="icon">
-
-                            <use xlink:href="{%static 'img/sprite.svg'%}#hashtag">
-                            </use>
-                        </svg>
-                        {{image.category}}
-
-                    </a>
-                    <a href="{% url 'location' location=image.location.id %}"
-                        class="gal-list__location">
-                        <svg class="icon">
-                            <use xlink:href="{%static 'img/sprite.svg'%}#location">
-                            </use>
-                        </svg>
-                        {{image.location}}
-
-                    </a>
-
-                </div>
-
-                <svg class="icon icon--copy"
-                    onclick="copyImageLink('{{image.image.url}}')">
-                    <use xlink:href="{%static 'img/sprite.svg'%}#copy">
-                    </use>
-                </svg>
-            </div>
-        </li>
-
-        {% endfor %}
-        {% else %}
-        <p>No images found</p>
-        {% endif %}
-
-    </ul>
 </div>
 
 {% endblock %}
