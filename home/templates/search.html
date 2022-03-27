@@ -7,8 +7,11 @@
         <!-- Comes from js -->
         {% for image in images %}
         <li class="gal-list">
-            <img src="{{image.image.url}} " alt="Gal Img" loading="lazy"
-                class="gal-img" />
+            <a href=" {% url 'image' image_id=image.id %} ">
+                <img src="{{image.image.url}} " alt="Gal Img" loading="lazy"
+                    class="gal-img" />
+            </a>
+
             <div class="gal-list-desc">
                 <div>
 

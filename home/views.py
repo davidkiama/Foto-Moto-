@@ -1,12 +1,20 @@
 from django.shortcuts import render
 from .models import Image, Location, Category
-
+from django.http import Http404
 # Create your views here.
 
 
 def home(request):
     images = Image.get_all_images()
     return render(request, 'index.html', {'images': images})
+
+
+def image(request, image_id):
+    try:
+        image = Image.objects.get(id=image_id)
+    except:
+        raise Http404()
+    return render(request, 'image.html', {'image': image})
 
 
 def category(request, category):

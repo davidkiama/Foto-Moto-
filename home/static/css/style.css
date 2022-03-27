@@ -90,6 +90,17 @@ body {
   background-color: hsla(0, 0%, 90%, 0.3);
 }
 
+.full {
+  margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.full img {
+  height: 100%;
+}
+
 /* Gallery */
 .gallery {
   padding: 2rem;
