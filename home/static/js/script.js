@@ -38,3 +38,11 @@ const galleryUl = document.querySelector(".gallery").querySelector("ul");
 //   `;
 //   galleryUl.insertAdjacentHTML("beforeend", imageHtml);
 // }
+
+//copy image link
+const copyIcons = document.querySelectorAll(".icon--copy");
+const baseUrl = "http://127.0.0.1:8000";
+
+const copyImageLink = function (imageUrl) {
+  navigator.clipboard.writeText(baseUrl + imageUrl);
+};
