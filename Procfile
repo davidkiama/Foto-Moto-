@@ -1,0 +1,1 @@
+web: gunicorn Foto_Moto.wsgi 
