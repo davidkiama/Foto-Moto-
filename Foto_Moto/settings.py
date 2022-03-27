@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'Foto_Moto.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dnhnn1hl23f3d',
         'USER': 'koteyokikvljnu',
         'PASSWORD': '45db6d184fed76989666c1e3f9a243f2b33a58f9e828af1e772649da17942f2e',
