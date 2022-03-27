@@ -11,7 +11,7 @@
             <div class="gal-list-desc">
                 <div>
 
-                    <a href=" {% url 'category' category=image.category.id %} "
+                    <a href="{% url 'category' category=image.category.id %}"
                         class="gal-list__category">
                         <svg class="icon">
                             <use xlink:href="static/img/sprite.svg#hashtag">
@@ -20,13 +20,16 @@
                         {{image.category}}
 
                     </a>
-                    <p class="gal-list__location">
+                    <a href="{% url 'location' location=image.location.id %}"
+                        class="gal-list__location">
                         <svg class="icon">
                             <use xlink:href="static/img/sprite.svg#location">
                             </use>
                         </svg>
                         {{image.location}}
-                    </p>
+
+                    </a>
+
                 </div>
 
                 <svg class="icon">
