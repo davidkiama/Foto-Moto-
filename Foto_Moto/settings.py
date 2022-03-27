@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
-import dj_database_url
-from decouple import config, Csv
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,34 +77,21 @@ WSGI_APPLICATION = 'Foto_Moto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-MODE = config("MODE", default="dev")
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
-
-if config('MODE') == "dev":
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': config('DB_NAME'),
-            'USER': config('DB_USER'),
-            'PASSWORD': config('DB_PASSWORD'),
-            'HOST': config('DB_HOST'),
-            'PORT': '',
-        }
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dnhnn1hl23f3d',
+        'USER': 'koteyokikvljnu',
+        'PASSWORD': '45db6d184fed76989666c1e3f9a243f2b33a58f9e828af1e772649da17942f2e',
+        'HOST': 'ec2-18-215-96-22.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
+
+}
 # production
-else:
-    DATABASES = {
-        'default': dj_database_url.config(
-            default=config('DATABASE_URL')
-        )
-    }
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = []
 
 
 # Password validation
@@ -165,8 +151,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())
 
 
 MEDIA_URL = '/media/'

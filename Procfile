@@ -1,1 +1,1 @@
-web: gunicorn Foto_Moto.wsgi 
+web: gunicorn Foto_Moto.wsgi --log-file -
