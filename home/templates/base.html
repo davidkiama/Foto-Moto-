@@ -15,10 +15,24 @@
 <body>
     <div id="container">
         <header class="header">
-            <h1 class="logo">Foto Moto 🔥</h1>
+            <h1 class="logo">
+                <a href="{%url 'home' %} ">
+                    Foto Moto 🔥
+                </a>
+            </h1>
 
             <!-- Search -->
-            <input type="search" placeholder="Search" class="search" />
+            <form action="{% url 'search_images' %}" class="search-form" role="search">
+                <input required type="text" placeholder="Search" class="search"
+                    name="image" />
+                <button type="submit">
+                    <svg class="icon icon-search">
+
+                        <use xlink:href="{%static 'img/sprite.svg'%}#search-svgrepo-com">
+                        </use>
+                    </svg>
+                </button>
+            </form>
         </header>
 
         <main class="main">
