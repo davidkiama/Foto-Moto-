@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'django-insecure-n9a8!4t0*ztdc6)a3q6*%@!u61-+_)6f$s$y=q&$dj#@3r81zx'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.localhost', 'foto-moto.herokuapp.com', '.127.0.0.1']
 
@@ -18,7 +18,9 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home.apps.HomeConfig'
+    'home.apps.HomeConfig',
+
+
 ]
 
 MIDDLEWARE = [
@@ -66,7 +68,9 @@ DATABASES = {
     }
 
 }
-
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -93,24 +97,17 @@ USE_I18N = True
 
 USE_TZ = True
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = 'static/'
-STATICFILES_DIR = [
-    os.path.join(BASE_DIR, 'static'),
-    'foto-moto.herokuapp.com/static/',
-
-]
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
-STATIC_ROOT = BASE_DIR / "staticfiles"
+# Extra places for collectstatic to find static files.
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+ROOT_PATH = os.path.dirname(__file__)
+
+
+STATICFILES_DIRS = [os.path.join(ROOT_PATH, 'static')]
 
 
 MEDIA_URL = '/media/'
