@@ -84,6 +84,9 @@ body {
 .icon-search {
   fill: black;
 }
+.icon-search:hover {
+  color: gold;
+}
 
 .main {
   flex: 1 0 auto;
@@ -156,6 +159,15 @@ body {
 .gal-list__location {
   display: flex;
   align-items: center;
+  color: white;
+}
+.gal-list__category:hover,
+.gal-list__location:hover {
+  color: gold;
+}
+.gal-list__category:hover svg,
+.gal-list__location:hover svg {
+  fill: gold;
 }
 
 .hashtag {
