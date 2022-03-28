@@ -8,8 +8,8 @@ SECRET_KEY = 'django-insecure-n9a8!4t0*ztdc6)a3q6*%@!u61-+_)6f$s$y=q&$dj#@3r81zx
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['.localhost',
-                 'foto-moto.herokuapp.com', '.127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['localhost',
+                 'foto-moto.herokuapp.com', '127.0.0.1', '0.0.0.0']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -65,8 +65,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dnhnn1hl23f3d',
-        'USER': 'koteyokikvljnu',
-        'PASSWORD': '45db6d184fed76989666c1e3f9a243f2b33a58f9e828af1e772649da17942f2e',
+        'USER': 'kiama',
+        'PASSWORD': 'kiamapwd',
         'HOST': 'ec2-18-215-96-22.compute-1.amazonaws.com',
         'PORT': '5432',
     }
