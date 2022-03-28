@@ -84,9 +84,6 @@ body {
 .icon-search {
   fill: black;
 }
-.icon-search:hover {
-  fill: gold;
-}
 
 .main {
   flex: 1 0 auto;
@@ -167,6 +164,9 @@ body {
 }
 .gal-list__category:hover svg,
 .gal-list__location:hover svg {
+  fill: gold;
+}
+.icon--copy:hover {
   fill: gold;
 }
 
