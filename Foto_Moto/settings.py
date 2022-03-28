@@ -8,7 +8,8 @@ SECRET_KEY = 'django-insecure-n9a8!4t0*ztdc6)a3q6*%@!u61-+_)6f$s$y=q&$dj#@3r81zx
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.localhost',
+                 '.foto-moto.herokuapp.com', '.127.0.0.1', '.0.0.0.0']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
