@@ -108,10 +108,10 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 
-# ROOT_PATH = os.path.dirname(__file__)
+ROOT_PATH = os.path.dirname(__file__)
 
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(ROOT_PATH, 'static')]
 FILE_CHARSET = 'utf-8'
 
 
