@@ -1,12 +1,15 @@
 from statistics import mode
 from django.db import models
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 
 
 class Image(models.Model):
-    image = models.ImageField(
-        upload_to='uploads/', default='default.jpg')
+    # image = models.ImageField(
+    #     upload_to='uploads/', default='default.jpg')
+    image = CloudinaryField('image')
     title = models.CharField(max_length=60)
     description = models.TextField()
     location = models.ForeignKey('Location', on_delete=models.CASCADE)

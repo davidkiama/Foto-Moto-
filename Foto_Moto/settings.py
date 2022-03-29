@@ -1,6 +1,10 @@
 import os
 from pathlib import Path
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -18,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     "whitenoise.runserver_nostatic",
     'django.contrib.messages',
+    'cloudinary',
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
 
@@ -117,5 +122,12 @@ FILE_CHARSET = 'utf-8'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+cloudinary.config(
+    cloud_name="dvua6fhuc",
+    api_key="242318296529564",
+    api_secret="0l6qjwjrmEFXuT__sbCZgLm1Xyc"
+)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
